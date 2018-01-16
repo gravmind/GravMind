@@ -1,4 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{REQUEST_URI} \.(php|html)$
-RewriteRule ^(.*)$ $1 [L,QSA]
