@@ -1,0 +1,194 @@
+
+
+/*
+* MF Select
+*/
+
+@rd-select-dropdown-color: @input-color;
+@rd-select-dropdown-bg: @input-background;
+
+@rd-select-dropdown-item-hover-color: @white-clr;
+@rd-select-dropdown-item-hover-bg: @brand-primary;
+
+@rd-select-dropdown-item-selected-color: @input-color;
+@rd-select-dropdown-item-selected-bg: darken(@input-background, 5%);
+
+@rd-select-icon-color: @input-color;
+
+.mfSelect {
+  position: relative;
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: (5/@base-text-size)*1rem;
+    padding-bottom: (5/@base-text-size)*1rem;
+    margin-top: (15/@base-text-size)*1rem;
+    max-height: (300/@base-text-size)*1rem;
+    opacity: 0;
+    visibility: hidden;
+    border: ((1.2/@base-text-size)*1rem) solid #888;
+    box-shadow: @box-shadow-key-light;
+    transition: .3s all ease-in-out;
+    outline: none;
+    -webkit-appearance: none;
+    font-weight: @input-font-weight;
+    line-height: @input-line-height;
+    border: @input-brdr;
+    background: @rd-select-dropdown-bg;
+    color: @rd-select-dropdown-color;
+    border-radius: @input-border-radius;
+    z-index: 1;
+    .transform(translateY(((20/@base-text-size)*1rem)));
+
+    .option {
+      position: relative;
+      z-index: 1;
+      text-transform: none;
+      cursor: pointer;
+      padding: ((10/@base-text-size)*1rem) ((15/@base-text-size)*1rem);
+      overflow: hidden;
+      transition: .4s all ease-in-out;
+      transition-delay: .2s;
+      font-size: (16/@base-text-size)*1rem;
+      line-height: (30/@base-text-size)*1rem;
+
+      &.selected {
+        background: @rd-select-dropdown-item-selected-bg;
+        color: @rd-select-dropdown-item-selected-color;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: @rd-select-dropdown-item-hover-bg;
+        opacity: 0;
+        z-index: -1;
+        transition: .4s all ease-in-out;
+       .transform(translate(-20%, -50%));
+      }
+
+      &:before {
+        content: '\f00c';
+        position: absolute;
+        display: inline-block;
+        left: (15/@base-text-size)*1rem;
+        color: @rd-select-dropdown-item-hover-color;
+        // font: 400 20px @fa;
+        font-weight: 400;
+        font-size: (20/@base-text-size)*1rem;
+        font-family: @fa;
+        line-height: inherit;
+        transition: .4s all ease-in-out;
+       .transform(scale(0) rotate(-60deg));
+      }
+
+      &:hover {
+        color: @rd-select-dropdown-item-hover-color;
+        padding-left: (40/@base-text-size)*1rem;
+        transition-delay: 0s;
+
+        &:before {
+          transition-delay: .15s;
+          .transform(scale(1) rotate(0deg));
+        }
+
+        &:after {
+          width: (500/@base-text-size)*1rem;
+          height: (500/@base-text-size)*1rem;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: (15/@base-text-size)*1rem;
+      .triangle(top, ((14/@base-text-size)*1rem), ((8/@base-text-size)*1rem), #eee);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: (15/@base-text-size)*1rem;
+      .triangle(top, ((12/@base-text-size)*1rem), ((6/@base-text-size)*1rem), #FFF);
+    }
+  }
+
+  .value {
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+    font-size: @input-font-size;
+    padding: @input-padding;
+    line-height: @input-line-height;
+    color: @placeholder-clr;
+    background: @input-background;
+    border: @input-brdr;
+    border-radius: @input-border-radius;
+
+    &:before, &:after {
+      position: absolute;
+      right: (12/@base-text-size)*1rem;
+      top: (@input-height - ((24/@base-text-size)*1rem)) /2;
+      width: (24/@base-text-size)*1rem;
+      height: (24/@base-text-size)*1rem;
+      // font: 400 20px @fa;
+      font-weight: 400;
+      font-size: (20/@base-text-size)*1rem;
+      font-family: @fa;
+      line-height: (24/@base-text-size)*1rem;
+      color: @rd-select-icon-color;
+      text-align: center;
+      transition: .4s all ease;
+    }
+
+    &:before {
+      content: '\f0c9';
+     .transform(rotate(0deg) scale(1));
+    }
+
+    &:after {
+      content: '\f107';
+      font-size: (24/@base-text-size)*1rem;
+     .transform(rotate(-180deg) scale(0));
+    }
+  }
+
+  &.show {
+    .dropdown {
+      opacity: 1;
+      visibility: visible;
+     .transform(translateY(0));
+    }
+
+    .value {
+      background: @rd-select-dropdown-bg;
+      color: @rd-select-dropdown-color;
+      box-shadow: @box-shadow-ambient, @box-shadow-key-light;
+
+      &:before, &:after {
+        color: @rd-select-dropdown-color;
+      }
+
+      &:before {
+        .transform(rotate(90deg) scale(0));
+      }
+
+      &:after {
+        .transform(rotate(0deg) scale(1));
+      }
+    }
+  }
+}

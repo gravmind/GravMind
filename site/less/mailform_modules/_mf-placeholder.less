@@ -1,0 +1,61 @@
+/* Mail Form PlaceHolder
+========================================================*/
+.placeholder-fade-up() {
+  *:-webkit-autofill ~ & {
+    opacity: 0;
+    .transform(translateY(-33%) scale(0.8));
+   
+  }
+
+  &.state-1 {
+    opacity: 0;
+    .transform(translateY(-33%) scale(0.8));
+
+  }
+}
+
+.placeholder-fade-left() {
+  *:-webkit-autofill ~ & {
+    opacity: 0;
+    .transform(translateX(-100%));
+  }
+
+  &.state-1 {
+    opacity: 0;
+    .transform(translateX(-100%));
+  }
+
+  @media (max-width: 1365px) {
+    .container > .mailform &,
+    .grid_12 & {
+      .placeholder-fade-up;
+    }
+  }
+
+  @media (max-width: 979px) {
+    .grid_10 & {
+      .placeholder-fade-up();
+    }
+  }
+
+  @media (max-width: 767px) {
+    .placeholder-fade-up();
+  }
+}
+
+.mfPlaceHolder {
+  font: inherit;
+  cursor: text;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: @input-padding;
+  line-height: @input-line-height;
+  color: @placeholder-clr;
+  opacity: @placeholder-opacity;
+  font-size: @input-font-size;
+  font-weight: 300;
+  font-family: @input-font-family;
+  .placeholder-fade-up();
+  .transition(.3s all ease);
+}

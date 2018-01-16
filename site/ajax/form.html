@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Form</title>
+
+
+</head>
+<body>
+	<a href="./" class="closeIcon historyBack closeIconGallery"></a>
+	<div class="container mar_t_100 pad_b_m_8">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12 tac">
+				
+				<img src="img/p6_pic1.png" alt="">
+				<h4 class="mar_t_3">Contact<br>Form</h4>
+				<form class='rd-mailform' method="post" action="bat/rd-mailform.php" >
+					<!-- RD Mailform Type -->
+					<input type="hidden" name="form-type" value="contact"/>
+					<!-- END RD Mailform Type -->
+
+					<div class="form-group" >
+						<label class="form-label" data-add-placeholder for="mailform-input-name">Name</label>
+						<input id="mailform-input-name"
+							   type="text"
+							   name="name"
+							   data-constraints="@NotEmpty @LettersOnly"/>
+
+					</div>
+
+					<div class="form-group">
+						<label class="form-label" data-add-placeholder for="mailform-input-email">Email</label>
+						<input id="mailform-input-email"
+							   type="text"
+							   name="email"
+							   data-constraints="@NotEmpty @Email"/>
+
+					</div>
+
+					<div class="form-group textarea">
+						<label  class="form-label" data-add-placeholder for="mailform-input-textarea">Message</label>
+                      <textarea id="mailform-input-textarea"
+								name="message"
+								data-constraints="@NotEmpty"></textarea>
+
+					</div>
+
+					<div class="form-group btn-wr btns animateItem7">
+						<button class="btn btn-default btn-link btn-special form_b_1" type="reset">clear</button>
+						<button class="btn btn-default btn-link btn-special form_b_2" type="submit">submit</button>
+						<div class="mfInfo"></div>
+
+					</div>
+				</form>
+
+
+			</div>
+		</div>  
+
+	</div>
+	<script src="js/tm-script.js"></script>
+
+</body>
+</html>

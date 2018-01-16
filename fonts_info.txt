@@ -1,0 +1,9 @@
+List of Fonts used in template 
+
+
+
+Font Awesome		http://fortawesome.github.io/Font-Awesome/
+Krona One		http://www.google.com/fonts/specimen/Krona+One
+Open Sans		http://www.google.com/fonts/specimen/Open+Sans
+
+
