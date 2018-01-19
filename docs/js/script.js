@@ -229,11 +229,6 @@ function scrolloramaInit() {
                 css: {opacity: 0, rotationY: -270, transformOrigin: "right 50% -200"},
                 ease: Cubic.easeOut
             }), 0, -250)
-            .addTween('.btn_1 ', TweenMax.from($('.btn_1'), 2.0, {
-                delay: 0.6,
-                css: {opacity: 0, rotationY: 270, transformOrigin: "left 50% -300"},
-                ease: Cubic.easeOut
-            }), 0, -650)
 
 
             // page 3
