@@ -1889,10 +1889,10 @@ em {
 }
 /*-----------  PAGE 1  --------------------------------------------------*/
 /*-----------  PAGE 2  --------------------------------------------------*/
-#page2 .btn.btn_1 {
-  position: fixed
-}
-#page2 .btn.btn_2 {
+#page2 .btn.btn-default {
+  font: 800 18px/18px 'Open Sans', sans-serif;
+  color: #009c98;
+  background: #ffeecf;
   position: fixed
 }
 /*-----------  PAGE 3  --------------------------------------------------*/
