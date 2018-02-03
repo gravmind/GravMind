@@ -871,22 +871,28 @@ header {
   transform: scale(1);
 }
 .gallery_button {
+  font: 400 18px/18px 'Krona One', sans-serif;
+  color: #ffeecf;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #009c98 url(../img/start_hover.png) repeat right top;
+  border: 9px solid #40433d;
+  border-radius: 40px;
+  margin-top: 15px;
   position: fixed;
   display: inline-block;
   bottom: -100px;
   left: 130px;
   text-align: center;
   z-index: 2500;
-  width: 62px;
+  width: 150px;
   height: 62px;
-  overflow: hidden;
-  background: #ffffff;
-  border-radius: 50%;
 }
 .gallery_button a {
   position: relative;
-  background: #fff8a1;
-  width: 62px;
+  background: #009c98 url(../img/start_hover.png) repeat right top;
+  width: 150px;
   height: 62px;
   display: inline-block;
   text-align: center;
@@ -900,8 +906,8 @@ header {
 .gallery_button a em {
   position: relative;
   z-index: 100;
-  margin-top: 25px;
-  background: url(../img/gallery_icon.png) center top no-repeat;
+  margin-top: 15px;
+  background: #009c98 url(../img/start_hover.png) repeat right top;
   width: 17px;
   height: 25px;
   display: inline-block;
@@ -914,8 +920,8 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background: #009c98;
-  width: 62px;
+  background: #009c98 url(../img/start_hover.png) repeat right top;
+  width: 150px;
   height: 62px;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -933,8 +939,8 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background: #ffffff;
-  width: 62px;
+  background: #009c98 url(../img/start_hover.png) repeat right top;
+  width: 150px;
   height: 62px;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -949,7 +955,8 @@ header {
   border-radius: 50%;
 }
 .gallery_button a:hover {
-  background: #ffffff;
+  text-decoration: none;
+    background: url(../img/start_hover.png) repeat left top;
 }
 .gallery_button a:hover .bg1 {
   -webkit-transform: scale(1);
@@ -1556,7 +1563,6 @@ footer {
   display: block;
 }
 .start {
-  position: fixed;
   display: inline-block;
   font: 400 18px/18px 'Krona One', sans-serif;
   color: #ffeecf;
