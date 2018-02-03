@@ -1556,6 +1556,7 @@ footer {
   display: block;
 }
 .start {
+  position: fixed;
   display: inline-block;
   font: 400 18px/18px 'Krona One', sans-serif;
   color: #ffeecf;
