@@ -874,7 +874,7 @@ header {
   position: fixed;
   display: inline-block;
   bottom: -100px;
-  right: 130px;
+  left: 130px;
   text-align: center;
   z-index: 2500;
   width: 62px;
